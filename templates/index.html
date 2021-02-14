@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<link rel="stylesheet" href="../static/project.css">
+
+	<meta charset="utf-8">
+
+	<title>Wanna Help You!</title>
+
+	<!-- description text that displays below the link in google search results -->
+	<meta name="description" content="Description of site" />
+
+</head>
+
+{% block body %}
+
+<body>
+
+	<section class="page-wrap">
+
+
+		<header>
+			<!-- Defining the header section of the page with the appropriate tag -->
+
+			<div>
+				<h1>Help Karo!</h1>
+				<p>#HelpAnonymously ;)</p>
+			</div>
+
+			<nav>
+				<!-- The nav link semantically marks your main site navigation -->
+				<ul>
+					<li><a href="#block1">About Us</a></li>
+					<li><a href="#block2">Issues</a></li>
+					<li><a href="#block3">NGO's</a></li>
+
+				</ul>
+			</nav>
+
+
+		</header>
+
+		
+
+		<article id="block1" class="module-block">
+			
+			<h2>About Us</h2>
+			
+			<img class="right" src="photo" alt="" />
+
+			<p> We are a non-profit social welfare platform. Founded by Anjanay Raina, Jatin Kumar Sharma and Bhavya Jain in the year 2021, We are your bridge between social welfare socities and NGO's.This platform continues to work for the elimination of child labor, empowerment of women , inclusion of women in STEM fields and uplifting the needy and the poor.We have partrned with many of the NGO's .You can either directly reach them using the links given below or you can post a comment in the global chat and we will help you to recognize what can be done in order to resolve your problem 
+				,and get your story to the world.
+				
+				<br />
+				<br />
+
+				<strong aria-setsize="1000 px">Our Working</strong>
+				<br />
+				<br />
+				When you post your story to us , you will recieve a option of giving us your mail or phone number , this is done so we can reach you 
+				reagrding your problem if we think your problem is legitimate.<strong>Remember , your email is just with us and your anonymity will remain absolute
+				no matter what ,the requirement for your mail is just for the team at Help Karo and the user to have a medium of communcation</strong>.
+				We will then ask for some proof reagrding your claims and if those proofs are found to be satisfactory , we will 
+				dispatch our inspection team to get a idea of the situation.If the claims are found to be true we direcly engage with the NGO's and welfare societies to help
+				resolve the issue in your area.
+				<br />
+				<br />
+				<strong>Contact us</strong>
+				<br />
+			<br>Email: helpkaro@gmail.com</p>
+
+			<ul class="social">
+
+				<li><a href="#Register">Post the Problem ;)</a></li>
+				
+				
+			
+			</ul>
+
+		</article>
+
+
+		<section id="block2" class="module-block">
+
+			<h2>Issues</h2>
+
+			{% for post in posts %}
+			{% set fname = 'img/' + post.img_file %}
+			<article class="post">
+
+				<h3>
+						{{post.title}}
+						<img src="{{ url_for('static', filename = fname) }}" alt="Help Karo!">					</a>
+				</h3>
+
+				<strong class="date">{{post.date}}</strong>
+
+				<p>{{post.content}} </p>
+
+			</article>
+			{% endfor %}
+		</section>
+
+		
+
+
+
+		<section id="block3" class="module-block">
+				
+			<h2>NGO's</h2>
+		  
+			<ul class="gallery">
+
+				<li >
+					<a href="https://www.indianredcross.org/ircs/index.php">
+						<img alt="Red Cross" src="https://pbs.twimg.com/profile_images/951893914121719809/2RyKd_Tn_400x400.jpg"/>
+					</a>
+				</li>
+				<li>
+					<a href="https://www.cini-india.org/">
+						<img alt="" src="https://media-exp1.licdn.com/dms/image/C4D0BAQEgX7r8_GpqhA/company-logo_200_200/0/1519952299423?e=2159024400&v=beta&t=15QthoCEv38R_d8sqgL-KSSgvGHAwqg2gK-OByjL5dM"/>
+					</a>
+				</li>
+
+				<li>
+					<a href="https://www.smilefoundationindia.org/">
+						<img alt="Smile Foundation" src="https://projectheena.com/uploads/ngo/37146191295115/profileImage/images/smile-foundation.jpg"/>
+					</a>
+				</li>
+
+				<li>
+					<a href="https://www.nanhikali.org/">
+						<img alt="Nanhi Kali" src="https://projectheena.com/uploads/ngo/33143219224590/profileImage/images/nanhikali.jpg"/>
+					</a>
+				</li>
+
+				<li>
+					<a href="https://www.cry.org/">
+						<img alt="CRY" src="https://projectheena.com/uploads/ngo/39151731303315/profileImage/images/cry-india.jpg"/>
+					</a>
+				</li>
+				
+				<li>
+					<a href="https://www.careindia.org/">
+						<img alt="Care India" src="https://i2.wp.com/www.opindia.com/wp-content/uploads/2020/06/Care-India-logo.png?fit=1200%2C630&ssl=1"/>
+					</a>
+				</li>
+
+				<li>
+					<a href="http://www.azadfoundation.com/">
+						<img alt="Azad Foundation" src="https://media-exp1.licdn.com/dms/image/C4D0BAQEbR5w7I6pjqQ/company-logo_200_200/0/1593766822035?e=2159024400&v=beta&t=Ds125vjfVX3MLkqqE_LsIy3HvyQhznGV4X7lHU9Uf8k"/>
+					</a>
+				</li>
+
+				<li>
+					<a href="https://www.vimochana.co.in/">
+						<img alt="Vimochana" src="https://rohininilekani.org/wp-content/uploads/2020/03/Logo-VIMOCHANA.png"/>
+					</a>
+				</li>
+
+				<li>
+					<a href="https://www.oxfamindia.org/">
+						<img alt="Oxfam India" src="https://pbs.twimg.com/profile_images/1152100823259729920/aQ-zx0kT_400x400.png"/>
+					</a>
+				</li>
+
+
+			</ul>
+
+		</section>
+		
+	</section>
+
+	<footer>
+
+		<section class="page-wrap">
+
+			<form name="sentMessage" autocomplete="off" id="Register" action="/edit/0" method="post" enctype="multipart/form-data">
+
+				<h1>Post the Problem !</h1>
+				<label for="name" id="name-label">Name:
+					<input type="text" id="name" name="name" required>
+				</label>
+				<br>
+
+				<label for="Title" id="Title-label">Title:
+					<input type="text" id="Title" name="title" required>
+				</label>
+				<br>
+
+				<label for="Address" id="Address-label">Location:
+					<input type="text" id="Address" name="address">
+				</label>
+				<br>
+
+				<label for="Content" id="content-label">Content : <br>
+					<textarea id="Content" name="content" cols=70 rows=10
+						style="resize: none; overflow: auto;"></textarea>
+				</label>
+				<br>
+
+				
+				<label for="Image" id="Image-label">Image:
+				<input type="text" placeholder=" Name of The Image "  name="img_file" id="Image" required data-validation-required-message="Please enter the Image File.">
+				<br>
+                <input type="file" placeholder="Choose the File" id="Image_upload" onchange="myFunction()" name='file1' required data-validation-required-message>
+                
+				</label>
+				<br>
+				
+				<label for="email" id="email-label">Email:
+					<input type="email" id="email" name="email" placeholder="abc@xyz" required>
+				</label>
+				<br>
+				
+				<label for="Phone No." id="Phone No.-label">Phone No.:
+					<input type="text" id="Phone No." name="phone_no" placeholder="XXXXXXXXX">
+				</label>
+				<br>
+				
+				<br>
+
+				<button id="submit" type="submit" value="submit">POST IT!</button>
+
+
+			</form>
+
+		</section>
+
+
+		<p style="float:right;" class="up"><a href="#">⇪</a></p>
+
+	</footer>
+
+	{% endblock %}
+
+<script>
+
+function myFunction(){
+ var filename = document.getElementById('Image_upload').value;
+ document.getElementById('Image').value = filename;
+ alert(filename);
+}
+	
+
+</script>
+
+</body>
+
+</html>

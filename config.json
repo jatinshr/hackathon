@@ -1,0 +1,11 @@
+{
+  "params": {
+    "local_server": true,
+    "local_uri": "mysql://root:@localhost/jatin",
+    "prod_uri": "mysql://root:@localhost/jatin",
+    "name": "qwertyuiop",
+    "password": "1234567890",
+    "upload_location":"E:\\jatin sharma\\hackatho\\static\\img"
+
+    }
+  }
