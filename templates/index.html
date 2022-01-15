@@ -2,14 +2,11 @@
 <html>
 
 <head>
-	<link rel="stylesheet" href="../static/project.css">
+	<link rel="stylesheet" href="../static/css/Project.css">
 
 	<meta charset="utf-8">
 
 	<title>Wanna Help You!</title>
-
-	<!-- description text that displays below the link in google search results -->
-	<meta name="description" content="Description of site" />
 
 </head>
 
@@ -21,15 +18,14 @@
 
 
 		<header>
-			<!-- Defining the header section of the page with the appropriate tag -->
-
+			
 			<div>
 				<h1>Help Karo!</h1>
 				<p>#HelpAnonymously ;)</p>
 			</div>
 
 			<nav>
-				<!-- The nav link semantically marks your main site navigation -->
+				
 				<ul>
 					<li><a href="#block1">About Us</a></li>
 					<li><a href="#block2">Issues</a></li>
@@ -229,9 +225,23 @@
 		</section>
 
 
-		<p style="float:right;" class="up"><a href="#">⇪</a></p>
+		<p style="float:left;" class="up"><a href="#">⇪</a></p>
 
 	</footer>
+
+	<script> 
+		window.intergramId = "1084452675";
+		window.intergramCustomizations = {
+			titleClosed: 'Any Doubt?',
+			titleOpen: 'Ask here!',
+			introMessage: 'Hi, Please tell your doubt!',
+			autoResponse: 'Please Wait',
+			autoNoResponse: 'Looks like nobody is online!',
+			mainColor: "#E75343", // Can be any css supported color 'red', 'rgb(255,87,34)', etc
+			alwaysUseFloatingButton: false // Use the mobile floating button also on large screens
+		};
+	</script>
+	<script id="intergram" type="text/javascript" src="https://www.intergram.xyz/js/widget.js"></script>
 
 	{% endblock %}
 
